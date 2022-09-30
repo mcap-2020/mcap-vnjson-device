@@ -1,18 +1,18 @@
 {
   "name": "mcap-device",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "Visual Novel Engine",
   "main": "rollup.config.js",
   "scripts": {
-    "build": "rollup -c",
-    "kill": "taskkill -F -IM node.exe",
     "dev": "rollup -cw",
+    "make": "rollup -c",	
+    "kill": "taskkill -F -IM node.exe",	
+    "init": "node node_modules/vnjson-init/index.js",	
     "update": "node node_modules/vnjson-update/index.js",
-    "publish": "node node_modules/vnjson-publish/index.js",
-    "init": "node node_modules/vnjson-init/index.js"
+    "publish": "node node_modules/vnjson-publish/index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.16.11",
