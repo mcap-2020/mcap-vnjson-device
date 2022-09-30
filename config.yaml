@@ -1,8 +1,7 @@
 port: 9000
-src: src_mc
+src: src
 updateSrc: 
   url: https://github.com/mcap-2020/mcap-vnjson-device/archive/refs/heads/main.zip
   dir: mcap-vnjson-device-main
 updateDirs:
   - src
-  - src_mc
