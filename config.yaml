@@ -1,0 +1,8 @@
+port: 9000
+src: src_mc
+updateSrc: 
+  url: https://github.com/vnjson/mcap-device/archive/refs/heads/main.zip
+  dir: mcap-device-main
+updateDirs:
+  - src
+  - src_mc
