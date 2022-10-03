@@ -1,33 +1,40 @@
-/**
- * mc-get-block
- */
+// Команда mc-get-block
 
 export function mcGetBlockCommon(args) {
-    const props = ["color", "variant", "axis", "facing"];
-    const block = vnjs.store.MINECRAFT.BLOCK.data;
+    const block = vnjs.store.MINECRAFT.BLOCK.data;	
+    const props = [
+		"age","alt","attached","axis",
+		"bites",
+		"check_decay","color","contents",
+		"decayable","delay","disarmed",
+		"east","enabled","extended","eye",
+		"facing","flip",
+		"half","has_bottle_0","has_bottle_1","has_bottle_2","has_record","hinge",
+		"in_wall",
+		"legacy_data","level","locked",
+		"mode","moisture",
+		"nodrop","north",
+		"occupied","open",
+		"part","power","powered",
+		"rotation",
+		"seamless","shape","short","snowy","south","suspended",
+		"triggered","type",
+		"up","upper",
+		"variant",
+		"west"];
 
     let idExist = false;
     for (let key in args) {
-        /**
-         * Обрабатываю ID
-         */
+        // Обрабатываются ID
         if (!props.includes(key) && key !== "default" && block.id === key) {
             idExist = true;
             vnjs.exec(args[key]);
         }
-        /**
-         * Обрабатвываю свойства ["color", "variant", "axis", "facing"];
-         */
+		// Обрабатываються свойства
         if (props.includes(key)) {
-            /**
-             * Пробегаю по свойтвам блока
-             */
             for (let blockKey in block.state) {
                 if (blockKey.includes(`name=${key}`)) {
                     let blockParam = block.state[blockKey];
-                    /**
-                     * Передаю value блока в переменную заданную пользователем color: color123
-                     */
                     vnjs.state.data[args[key]] = blockParam;
                 }
             }
