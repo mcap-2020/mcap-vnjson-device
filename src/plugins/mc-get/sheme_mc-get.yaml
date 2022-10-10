@@ -8,6 +8,7 @@
     request: BLOCK
     slot: 0
     pos: "250 65 112"
+    # data: "clear"
   next: true
 
 

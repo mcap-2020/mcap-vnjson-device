@@ -1,5 +1,5 @@
 export default function (args){
-    let _pos = vnjs.plugins['data'].stringToData(args.pos) 
+    let _pos = vnjs.plugins['data'].stringToData(args.pos)
     const [x, y, z] = _pos.split(" ");
     const data = {
         request: args.request,
@@ -7,7 +7,7 @@ export default function (args){
         posX: x || 0,
         posY: y || 0,
         posZ: z || 0,
-        data: "",
+        data: args.data || "",
     };
     const str = `GET_${JSON.stringify(data)}`;
     query(str)
