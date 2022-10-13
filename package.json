@@ -1,5 +1,5 @@
 {
-  "name": "mcap-device",
+  "name": "mcap-vnjson-device",
   "version": "2.3.7",
   "description": "Visual Novel Engine",
   "main": "rollup.config.js",
